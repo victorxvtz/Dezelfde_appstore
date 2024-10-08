@@ -6,6 +6,7 @@ def play() :
     root = tk.Toplevel()
     root.title("Random Number Game")
 
+    # The number the user has to guess and the number of attempts the user has made
     number = random.randint(1, 100)
     attempts = 0
     max_attempts = 20
