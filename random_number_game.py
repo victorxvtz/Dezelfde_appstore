@@ -2,7 +2,8 @@ import random
 # import main
 import tkinter as tk
 
-def play() :
+
+def play():
     root = tk.Toplevel()
     root.title("Random Number Game")
 
@@ -11,7 +12,7 @@ def play() :
     attempts = 0
     max_attempts = 20
 
-    #sorry the messy code, tkinter is just not nice to keeping code clean
+    # sorry the messy code, tkinter is just not nice to keeping code clean
 
     text_label1 = tk.Label(root, text="Welcome to the number guessing game!")
     text_label2 = tk.Label(root, text="I'm thinking of a number between 1 and 100")
@@ -55,7 +56,7 @@ def play() :
             text_label6.pack()
             text_label7 = tk.Label(root, text="Do you want to play again?: ")
             text_label7.pack()
-            yes_button = tk.Button(root, text="Yes", command= lambda: restart_game(root))
+            yes_button = tk.Button(root, text="Yes", command=lambda: restart_game(root))
             yes_button.pack()
             no_button = tk.Button(root, text="No", command=root.destroy)
             no_button.pack()
@@ -73,7 +74,7 @@ def play() :
             text_label5.config(text=f"Congratulations! You guessed the number in {attempts} attempts")
             text_label7 = tk.Label(root, text="Do you want to play again?: ")
             text_label7.pack()
-            yes_button = tk.Button(root, text="Yes", command= lambda: restart_game(root))
+            yes_button = tk.Button(root, text="Yes", command=lambda: restart_game(root))
             yes_button.pack()
             no_button = tk.Button(root, text="No", command=root.destroy)
             no_button.pack()
@@ -85,18 +86,15 @@ def play() :
             entry.pack_forget()
             button.pack_forget()
 
-
     button = tk.Button(root, text="Submit", command=on_submit_button_click)
     button.pack()
 
     root.mainloop()
 
+
 def restart_game(root):
     root.destroy()
     play()
-
-
-
 
 # def play():
 #     print("Welcome to the number guessing game!")

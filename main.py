@@ -1,4 +1,4 @@
-#this is the game hub. this is where you choose which game you want to play
+# this is the game hub. this is where you choose which game you want to play
 
 import math_quiz
 import random_number_game
@@ -27,6 +27,7 @@ def on_quit_button_click():
     print("Goodbye!")
     quit()
 
+
 def menu():
     root = tk.Tk()
     root.config(width=400, height=300)
@@ -50,6 +51,7 @@ def menu():
     quit_button.pack()
 
     root.mainloop()
+
 
 menu()
 
